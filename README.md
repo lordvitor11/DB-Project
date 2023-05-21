@@ -1,0 +1,4 @@
+# DB-Project
+Projeto para aplicação do uso de banco de dados MySQL na prática.
+
+>Hospedado em: http://dbprojectbylv.infinityfreeapp.com/

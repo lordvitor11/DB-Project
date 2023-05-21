@@ -1,0 +1,131 @@
+:root {
+    --green: #1AEBB6;
+    --darkGreen: #08dfdf;
+    --grey: #f0f0f0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.9rem;
+}
+
+div.box {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--grey);
+}
+
+div.container {
+    width: 800px;
+    height: 500px;
+    display: flex;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow:
+    0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+    0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+    0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12);
+}
+
+div.imgCenter {
+    text-align: center;
+    width: 90%;
+}
+
+div.imgCenter span, div.imgCenter a {
+    font-size: 1.0rem;
+    font-weight: 600;
+}
+
+div.info {
+    width: 35%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--green);
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+}
+
+div.info img {
+    width: 24%;
+}
+
+div.content {
+    width: 65%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+div.center {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+label {
+    float: left;
+    margin-top: 25px;
+    font-weight: 600;
+}
+
+form {
+    width: 70%;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+}
+
+a {
+    color: orange;
+}
+
+input[type="submit"] {
+    background-color: var(--grey);
+    margin-top: 30px;
+    border: none;
+    border-radius: 3px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+#name, #email, #password, #cPassword {
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+#title {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.disabled {
+    background-color: var(--grey);
+}
+
+.enabled {
+    background-color: var(--green);
+}
+
+input[type="submit"]:hover:enabled {
+    background-color: var(--darkGreen);
+    transition: all ease 0.4s;
+}

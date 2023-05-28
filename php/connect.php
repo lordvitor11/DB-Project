@@ -1,9 +1,10 @@
 <?php
-    // DB data
+    // DB data test
     $dbServername = 'localhost';
     $dbUsername = 'root';
     $dbPassword = '';
     $dbName = 'users';
+
 
     // Try to connect
     $conn = new mysqli($dbServername, $dbUsername, $dbPassword, $dbName);

@@ -58,23 +58,24 @@
                                 $sql = "SELECT email, pass FROM data WHERE email = ('$email')";
                                 // $sql = "INSERT INTO data (name, email, pass) VALUES ('$name', '$email', '$pass')";
 
-                                $result = $conn->query($sql);
-
-                                if ($result->num_rows > 0) {
+                                $result = mysqli_query($conn, $sql);
+                                
+                                if (mysqli_num_rows($result) != 0) {
                                     while ($row = $result->fetch_assoc()) {
                                         $tempEmail = $row['email'];
                                         $tempPass = $row['pass'];
                                     }
 
                                     if ($tempEmail == $email && $tempPass == $pass) {
-                                        header("Location: ../index.php");
+                                        // header("Location: ../index.php");
+                                        echo '<script>location.href="../index.php";</script>';
                                     } else {
                                         echo "Credencias inválidas!";
                                     }
                                 } else {
                                     echo "E-mail não cadastrado!";
                                 }
-                            
+
                                 $conn->close();
                                 echo "</div>";
                             }

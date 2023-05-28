@@ -53,22 +53,23 @@
 
                             if (!empty($name) && !empty($email) && !empty($pass)) {
                                 echo "<div id='error'>";
-                                // Try to insert data
-                                $sql = "INSERT INTO data (name, email, pass) VALUES ('$name', '$email', '$pass')";
-                            
-                                try {
-                                    if ($conn->query($sql) === TRUE) {
-                                        header("location: login.php");
-                                    } 
-                            
-                                } catch (Exception $e) {
-                                    if ($e -> getCode() == 1062) {
-                                        echo "Email já cadastrado!";
+
+                                $result = mysqli_query($conn, "SELECT * FROM data WHERE email = '$email'");
+
+                                if (mysqli_num_rows($result) > 0) {
+                                    echo "Email já cadastrado!";
+                                } else {
+                                    $sql = "INSERT INTO data (name, email, pass) VALUES ('$name', '$email', '$pass')";
+
+                                    $result = mysqli_query($conn, $sql);
+                                    if ($result == 1) {
+                                        // header("location: login.php");
+                                        echo '<script>location.href="login.php";</script>';
                                     } else {
-                                        echo $e;
+                                        echo mysqli_errno($conn);
                                     }
                                 }
-                            
+                                
                                 $conn->close();
                                 echo "</div>";
                             }

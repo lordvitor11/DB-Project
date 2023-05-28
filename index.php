@@ -4,23 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bem-vindo(a)</title>
-    <link rel="stylesheet" href="./source/landpage.css">
+    <link rel="stylesheet" href="landpage.css">
+    <title>Home</title>
 </head>
 <body>
-    <div class="content">
+    <div class="box">
         <div class="header">
             <h1>Database Project</h1>
-            <nav>
-                <!-- Navegação -->
-                <ul>
-                    <li><a href="">Início</a></li>
-                    <li><a href="./php/signup.php">Cadastrar</a></li>
-                    <li><a href="./php/login.php">Entrar</a></li>
-                </ul>
-            </nav>
+
+            <div class="navbar">
+                <a href="index.php"><button>Início</button></a>
+                <a href="./php/signup.php"><button>Cadastrar</button></a>
+                <a href="./php/login.php"><button>Entrar</button></a>
+            </div>
         </div>
-        <div class="main">
+        <div class="container">
             <h2>Bem-vindo(a) ao meu projeto!</h2> <br>
             <p>Projeto desenvolvido por <a href="https://github.com/lordvitor11" target="_blank">Vitor Cesar</a> a fim de aplicar o uso de banco de dados na prática.</p> <br>
             <a href="https://github.com/lordvitor11/DB-Project" target="_blank" class="cta-button">Saiba mais</a>
